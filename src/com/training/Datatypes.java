@@ -1,9 +1,7 @@
 package com.training;
 
-import java.math.BigInteger;
-
-public class datatypes {
-    public static void main(String[] args){
+public class Datatypes {
+    public static void start(){
         final int int1 = 2;
         float float1 = 3.2f;
         double double1 = 4.3;

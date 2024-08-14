@@ -2,7 +2,7 @@ package com.training;
 import java.util.*;
 
 public class Game {
-    public static void main(String[] args){
+    public static void play(){
         Random r=new Random();
         int c=1;
         int num=r.nextInt(1000);
