@@ -1,4 +1,4 @@
-package com.training;
+package com.training.assignment1;
 
 public class Datatypes {
     public static void start(){

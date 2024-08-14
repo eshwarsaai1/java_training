@@ -1,6 +1,5 @@
-package com.training;
+package com.training.assignment1;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Scanner;
 

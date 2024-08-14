@@ -1,4 +1,4 @@
-package com.training;
+package com.training.assignment1;
 import java.util.*;
 
 public class Game {

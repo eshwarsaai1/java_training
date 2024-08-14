@@ -1,8 +1,6 @@
-import com.training.Calculator;
-import com.training.Datatypes;
-import com.training.Game;
-import pojo.Employee;
-import com.training.ExEmployee;
+import com.training.assignment2.Car;
+import com.training.assignment2.ElectricCar;
+import pojo.Vehicle;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +15,11 @@ public class Main {
 //        game.play();
 //        Datatypes data=new Datatypes();
 //        data.start();
+        ElectricCar ec=new ElectricCar();
+        System.out.println(ec.wheels);
+        ec.drive();
+        Car tata=new Car("petrol");
+        tata.horn();
 
     }
 }
