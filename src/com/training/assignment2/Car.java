@@ -1,7 +1,5 @@
 package com.training.assignment2;
 
-import pojo.Vehicle;
-
 public class Car implements Vehicle {
 
     private final int wheels=2;

@@ -1,4 +1,4 @@
-package pojo;
+package com.training.assignment2;
 
 public interface Vehicle {
 //    public Vehicle(String fuel){

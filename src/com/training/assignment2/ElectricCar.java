@@ -2,7 +2,7 @@ package com.training.assignment2;
 
 public class ElectricCar extends ElectricVehicle {
 
-    private int wheels=4;
+    private final int wheels=4;
     private final String fuel;
     public ElectricCar(String fuel) {
         this.fuel=fuel;

@@ -1,8 +1,4 @@
-import com.training.assignment1.Calculator;
-import com.training.assignment2.Car;
-import com.training.assignment2.ElectricCar;
 import pojo.Employee;
-import pojo.Vehicle;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,5 +1,4 @@
 package com.training.assignment2;
-import pojo.Vehicle;
 
 public abstract class ElectricVehicle implements Vehicle {
 
