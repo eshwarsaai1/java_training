@@ -1,10 +1,7 @@
 package com.training.assignment2;
 import pojo.Vehicle;
 
-public abstract class ElectricVehicle extends Vehicle {
-    public ElectricVehicle(int wheels) {
-        super(wheels,"Electricity");
-    }
+public abstract class ElectricVehicle implements Vehicle {
 
     @Override
     public void horn(){

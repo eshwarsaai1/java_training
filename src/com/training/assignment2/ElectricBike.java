@@ -1,9 +1,14 @@
 package com.training.assignment2;
 
 public class ElectricBike extends ElectricVehicle {
+    private final int wheels=2;
+    private final String fuel;
+    public ElectricBike(String fuel) {
+        this.fuel=fuel;
+    }
 
-    public ElectricBike(int wheels) {
-        super(2);
+    public int getWheels(){
+        return this.wheels;
     }
 
     @Override

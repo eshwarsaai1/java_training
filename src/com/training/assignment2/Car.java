@@ -2,10 +2,16 @@ package com.training.assignment2;
 
 import pojo.Vehicle;
 
-public class Car extends Vehicle {
+public class Car implements Vehicle {
 
+    private final int wheels=2;
+    private final String fuel;
     public Car(String fuel) {
-        super(4, fuel);
+        this.fuel=fuel;
+    }
+
+    public int getWheels(){
+        return this.wheels;
     }
 
     @Override

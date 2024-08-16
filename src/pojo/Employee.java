@@ -1,5 +1,7 @@
 package pojo;
 
+import java.util.Objects;
+
 public class Employee {
     private int employee_id;
     private String employee_name;
@@ -17,13 +19,12 @@ public class Employee {
     {
         System.out.println(s+" "+k);
     }
-    public Employee(int employee_id, String employee_name) {
-        this.employee_id = employee_id;
+    public Employee(String employee_name) {
         this.employee_name = employee_name;
     }
 
     public Employee() {
-        this(10001, "Chakree");
+        this("Chakree");
         this.employee_id=0;
     }
 
@@ -35,12 +36,15 @@ public class Employee {
         return employee_name;
     }
 
-    public void printthis(String s){
-        System.out.println(s);
+    @Override
+    public boolean equals(Object e){
+        Employee emp=(Employee)e;
+        return this.employee_name == emp.employee_name;
     }
 
-    public void printthis(){
-        this.printthis("Give some parameters");
+    @Override
+    public int hashCode(){
+        return Objects.hash(this.employee_name, this.employee_id);
     }
 
     public void setEmployee_name(String employee_name) {

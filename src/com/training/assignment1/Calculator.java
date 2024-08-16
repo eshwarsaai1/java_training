@@ -3,6 +3,12 @@ package com.training.assignment1;
 import java.math.BigInteger;
 import java.util.Scanner;
 
+class InvalidOpt extends RuntimeException{
+    public InvalidOpt(String s){
+        super(s);
+    }
+}
+
 public class Calculator {
     BigInteger k= BigInteger.valueOf(5);
     private BigInteger add(BigInteger a, BigInteger b){
@@ -23,17 +29,24 @@ public class Calculator {
     private BigInteger GCD(BigInteger a, BigInteger b){
         return a.gcd(b);
     }
-    public void start(){
+    public void start() throws InvalidOpt{
         Scanner sc=new Scanner(System.in);
         while (true) {
             System.out.println("Choose Operation: \n 1.Addition \n 2.Subtraction \n 3.Multiplication\n 4.Division\n 5.Modulus \n 6.GCD \n 7.Exit");
             int opt = sc.nextInt();
             switch (opt) {
                 case 1: {
-                    System.out.print("Enter first operand:");
-                    BigInteger a = new BigInteger(sc.next());
-                    System.out.print("Enter second operand:");
-                    BigInteger b = new BigInteger(sc.next());
+                    BigInteger a= new BigInteger("0");
+                    BigInteger b= new BigInteger("0");
+                    try {
+                        System.out.print("Enter first operand:");
+                        a= new BigInteger(sc.next());
+                        System.out.print("Enter second operand:");
+                        b = new BigInteger(sc.next());
+                    }
+                    catch (Exception e){
+                        System.out.println(e);
+                    }
                     System.out.println( add(a,b) );
                     break;
                 }
@@ -80,9 +93,9 @@ public class Calculator {
                 case 7:{
                     break;
                 }
-                default:
-                    System.out.println("INVALID INPUT!!");
-                    break;
+                default: {
+                    throw new InvalidOpt("Invalid menu option");
+                }
             }
             if(opt==7) break;
         }
