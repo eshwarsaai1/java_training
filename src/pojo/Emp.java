@@ -2,7 +2,7 @@ package pojo;
 
 import java.util.Objects;
 
-public class Employee {
+public class Emp {
     private int employee_id;
     private String employee_name;
     public String dept;
@@ -19,11 +19,11 @@ public class Employee {
     {
         System.out.println(s+" "+k);
     }
-    public Employee(String employee_name) {
+    public Emp(String employee_name) {
         this.employee_name = employee_name;
     }
 
-    public Employee() {
+    public Emp() {
         this("Chakree");
         this.employee_id=0;
     }
@@ -38,7 +38,7 @@ public class Employee {
 
     @Override
     public boolean equals(Object e){
-        Employee emp=(Employee)e;
+        Emp emp=(Emp)e;
         return this.employee_name == emp.employee_name;
     }
 
